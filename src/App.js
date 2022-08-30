@@ -1,10 +1,10 @@
 import "./App.css";
-
+import  ToggleButton  from "./ToggleButton/ToggleButton";
 import {
 	Button, ButtonGroup, Stack, IconButton, FloatingActionButton, UXPinWrapper,
-	LoadingButton, //BROKEN - wrong import
+	LoadingButton, //BROKEN 
 	SplitButton,
-	ToggleButton,
+	// ToggleButton,
 	ToggleButtonGroup,
 	Icon,
 	Checkbox,
@@ -12,12 +12,12 @@ import {
 	CheckboxGroup,
 	Radio,
 	RadioWithLabel, //BROKEN
-	RadioGroup, //BROKEN
+	RadioGroup, 
 	Rating,
-	Select, //BROKEN
+	Select, 
 	Switch,
-	SwitchWithLabel, //BROKEN
-	SwitchGroup, //BROKEN
+	SwitchWithLabel, 
+	SwitchGroup, 
 	TextField,
 	Card,
 	CardHeader,
@@ -54,15 +54,14 @@ import {
 	BottomNavigationAction,
 	Breadcrumbs,
 	Link,
-	Menu, //BROKEN
+	Menu,
 	MenuItem,
 	MenuList,
 	Pagination,
-	Stepper, //BROKEN
+	Stepper,
 	Tabs,
 	Tab,
 	Badge,
-	// Chip, //BROKEN
 	Divider,
 	Tooltip,
 	FormControl,
@@ -100,11 +99,7 @@ function App() {
 					<Button>Three</Button>
 				</ButtonGroup>
 				<hr/>
-				{/* <LoadingButton loading={true} variant="outlined">
-					Loading
-				</LoadingButton> */}
-				<hr/>
-				<IconButton ariaLabel="add accessibility text">
+				<IconButton >
 					home
 				</IconButton>
 				<hr/>
@@ -151,7 +146,6 @@ function App() {
 						subheader="December 6, 2021"
 						color="grey"
 						title="Design Insights"
-						ariaLabel="add"
 					/>
 					<CardMedia
 						alt="Cool art"
@@ -204,9 +198,9 @@ function App() {
 						<ListItemButton>
 							<ListItemAvatar>
 								<Avatar>
-									<Icon>
+									
 										people
-									</Icon>
+								
 								</Avatar>
 							</ListItemAvatar>
 							<ListItemText
@@ -284,11 +278,10 @@ function App() {
 					>
 						<IconButton
 							color="inherit"
-							aria-label="Menu"
 						>
-							<Icon>
+							
 								menu
-							</Icon>
+						
 						</IconButton>
 						<Typography
 							variant="h6"
@@ -308,25 +301,25 @@ function App() {
 					<BottomNavigationAction
 						label="Home"
 						icon={
-							<Icon>
-								home
-							</Icon>
+							
+								"home"
+							
 						}
 					/>
 					<BottomNavigationAction
 						label="Recents"
 						icon={
-							<Icon>
-								restore
-							</Icon>
+							
+								"restore"
+							
 						}
 					/>
 					<BottomNavigationAction
 						label="User"
 						icon={
-							<Icon>
-								person
-							</Icon>
+							
+								"person"
+					
 						}
 					/>
 				</BottomNavigation>
@@ -376,7 +369,7 @@ function App() {
 				<hr />
 				<Tabs
 					textColor="primary"
-					defaultValue={1}
+					value={1}
 					indicatorColor="primary"
 				>
 					<Tab
@@ -453,7 +446,7 @@ function App() {
 					Roboto
 				</Typography>
 				<FormControl
-					fullWidth="true"
+					fullWidth={true}
 				>
 
 					<FormHelperText>
@@ -463,7 +456,7 @@ function App() {
 						label="I'm a label"
 						control={
 							<Checkbox
-								defaultChecked="true"
+								
 								value="gilad"
 							/>
 						}
@@ -489,7 +482,7 @@ function App() {
 				>
 					<Grid
 						item={true}
-						xs="3"
+						xs={3}
 						order={1}
 					>
 						<Button
@@ -503,7 +496,7 @@ function App() {
 					</Grid>
 					<Grid
 						item={true}
-						xs="3"
+						xs={3}
 						order={2}
 					>
 						<Button
@@ -519,7 +512,7 @@ function App() {
 				<hr />
 				<ImageList
 					cols={3}
-					rowHeight="160"
+					rowHeight={160}
 				>
 					<ImageListItem
 						cols={1}
@@ -529,12 +522,10 @@ function App() {
 						/>
 						<ImageListItemBar
 							title="Trends"
-							titlePosition="top"
 							postion="left"
 							actionIcon={
 								<IconButton
 									color="inherit"
-									ariaLabel="Trends icon button"
 								>
 									star_border
 								</IconButton>
@@ -550,12 +541,11 @@ function App() {
 						/>
 						<ImageListItemBar
 							title="Insights "
-							titlePosition="top"
+							
 							postion="left"
 							actionIcon={
 								<IconButton
 									color="inherit"
-									ariaLabel="Insights icon button"
 								>
 									star_border
 								</IconButton>
@@ -571,12 +561,11 @@ function App() {
 						/>
 						<ImageListItemBar
 							title="Inspiration"
-							titlePosition="top"
+							
 							postion="left"
 							actionIcon={
 								<IconButton
 									color="inherit"
-									ariaLabel="Inspiration icon button"
 								>
 									star_border
 								</IconButton>
@@ -795,6 +784,24 @@ function App() {
 			/>
 
 			</Stack>
+
+			{/* <ToggleButtonGroup>
+				<ToggleButton
+					value="home"
+					startIcon="home"
+				/>
+				<ToggleButton
+					value="star"
+					startIcon="star"
+				/>
+				<ToggleButton
+					value="navigation"
+					startIcon="navigation"
+				/>
+
+			</ToggleButtonGroup> */}
+
+
 		</UXPinWrapper>
 
 	)
